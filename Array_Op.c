@@ -7,7 +7,7 @@ int n, i,value, position;
 void create(); 
 void display(); 
 void insert(); 
-void delete();
+void del();
 int main() 
 { 
 int choice=1; 
@@ -34,7 +34,7 @@ int choice=1;
    insert(); 
    break; 
  case 4: 
-   delete(); 
+   del(); 
    break; 
  case 5: 
    exit(0); 
@@ -81,7 +81,7 @@ a[position]=value;
  n=n+1; 
 } 
             //deleting an array element 
-void delete()
+void del()
 { 
  printf("\nEnter the position of the element to be deleted:\t"); 
  scanf("%d",&position); 
