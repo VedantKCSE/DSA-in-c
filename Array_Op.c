@@ -7,18 +7,20 @@ void create();
 void display();
 void insert();
 void del();
+void search();
 
 int main()
 {
     int choice = 1;
-    while (choice)
+    while (choice<=6)
     {
         printf("\n\n--------MENU-----------\n");
         printf("1.CREATE\n");
         printf("2.DISPLAY\n");
         printf("3.INSERT\n");
         printf("4.DELETE\n");
-        printf("5.EXIT\n");
+        printf("5.SEARCH\n");
+        printf("6.EXIT\n");
         printf("-----------------------");
         printf("\nENTER YOUR CHOICE:\t");
 
@@ -39,6 +41,8 @@ int main()
             del();
             break;
         case 5:
+            search();
+        case 6:
             exit(0);
         default:
             printf("\nInvalid choice:\n");
@@ -101,4 +105,20 @@ void del()
     }
     n = n - 1;
     printf("\nThe deleted element is =%d", value);
+}
+
+// Searching element in an array 
+void search()
+{
+    int ele;
+    printf("\nEnter the element which you want to  search : \t");
+    scanf("%d", &ele);
+    
+    for (i =0; i < n - 1; i++)
+    {
+        if(a[i] == ele){
+            printf("%d",i);
+        }
+    }
+    
 }
