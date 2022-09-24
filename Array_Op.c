@@ -1,13 +1,13 @@
 // program
 #include <stdio.h>
 #include <stdlib.h>
-int a[100];
-int n, i, value, position;
+int a[100],n, i, value, position;
 
 void create();
 void display();
 void insert();
 void del();
+
 int main()
 {
     int choice = 1;
@@ -21,7 +21,9 @@ int main()
         printf("5.EXIT\n");
         printf("-----------------------");
         printf("\nENTER YOUR CHOICE:\t");
+
         scanf("%d", &choice);
+        
         switch (choice)
         {
         case 1:
@@ -45,6 +47,7 @@ int main()
     }
     return 0;
 }
+
 // creatng array elements
 void create()
 {
@@ -56,6 +59,8 @@ void create()
         scanf("%d", &a[i]);
     }
 }
+
+
 // displaying an array elements
 void display()
 {
@@ -66,6 +71,8 @@ void display()
         printf("%d\t", a[i]);
     }
 }
+
+
 // inserting an element into an array
 void insert()
 {
@@ -73,20 +80,22 @@ void insert()
     scanf("%d", &position);
     printf("\nEnter the element to be inserted :\t");
     scanf("%d", &value);
-    for (i = n - 1; i >= position; i--)
+    for (i = n - 1; i >= position-1; i--)
     {
         a[i + 1] = a[i];
     }
-    a[position] = value;
+    a[position-1] = value;
     n = n + 1;
 }
+
+
 // deleting an array element
 void del()
 {
     printf("\nEnter the position of the element to be deleted:\t");
     scanf("%d", &position);
-    value = a[position];
-    for (i = position; i < n - 1; i++)
+    value = a[position-1];
+    for (i = position-1; i < n - 1; i++)
     {
         a[i] = a[i + 1];
     }
