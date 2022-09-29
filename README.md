@@ -1,2 +1,4 @@
 # DSA-in-c
-[Array Operations](/Array_Op.c)
+
+## Links to the codes:-
+- [Array Operations](/Array_Op.c)
