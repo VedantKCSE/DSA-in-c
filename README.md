@@ -1,2 +1,2 @@
 # DSA-in-c
-[Array Operations](/Array)
+[Array Operations](/Array_Op.c)
